@@ -91,8 +91,10 @@ class Point(object):
             return p2
 
     def halfway_to(self, p2):
-        new_point = self.get_distance_from(p2)
-
+        new_x = (self.x + p2.x) / 2
+        new_y = (self.y + p2.y) / 2
+        new_point = Point(new_x, new_y)
+        return new_point
 
 ###############################################################################
 # NOTE: For ALL of the methods that you implement, the method is allowed
